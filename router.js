@@ -19,7 +19,8 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
 	})
 	.state('weekoffer', {
 		url : '/weekoffer',
-		templateUrl : './classify/weekoffer.html'
+		templateUrl : './classify/weekoffer.html',
+		controller:'weekctrl'
 	})
 	.state('detail', {
 		url : '/detail',
