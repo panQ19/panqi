@@ -10,7 +10,8 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
 	$stateProvider
 	.state('home', {
 		url : '/home',
-		templateUrl : './home/home.html'
+		templateUrl : './home/home.html',
+		controller : 'homeCtrl'
 	})
 	.state('classify', {
 		url : '/classify',

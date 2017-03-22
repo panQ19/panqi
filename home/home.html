@@ -14,71 +14,118 @@
 		</div>
 	</div>
 	<div id="home_banner">
-		<img src="./home/img/banner.jpg" />
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide" ng-repeat="item in lunboData"><img src="{{ item.picUrl }}"/></div>
+			</div>
+			<!-- 如果需要分页器 -->
+			<div class="swiper-pagination"></div>
+		</div>
 	</div>
-	<div id="home_nav">
-		<section>
-			<img src="./home/img/nav1.jpg" />
-		</section>
-		<section>
-			<img src="./home/img/nav2.jpg" />
-		</section>
-		<section>
-			<img src="./home/img/nav3.jpg" />
-		</section>
-		<section>
-			<img src="./home/img/nav4.jpg" />
+	<div id="home_nav" ng-repeat="item in navData">
+		<section ng-repeat="item1 in item.items">
+			<img src="{{ item1.imgUrl }}" />
 		</section>
 	</div>
 	<div id="home_goodslist">
-		<div class="goodsimg">
-			<img src="./home/img/goodslist.jpg" />
+		<div ng-repeat="item in listData.slice(0, 6)">
+			<div class="goodsimg" ng-repeat="item1 in item.items">
+				<img src="{{ item1.imgUrl }}" />
+			</div>
 		</div>
-		<div class="goodsimg">
-			<img src="./home/img/goodslist.jpg" />
+		<div ng-repeat="item in listData.slice(6, 7)">
+			<div class="goodslistheader" ng-repeat="item1 in item.items">
+				<img src="{{ item1.imgUrl }}" />
+			</div>
 		</div>
-		<div class="goodsimg">
-			<img src="./home/img/goodslist.jpg" />
+		<div ng-repeat="item in listData.slice(7, 11)">
+			<div class="goodsimg" ng-repeat="item1 in item.items">
+				<img src="{{ item1.imgUrl }}" />
+			</div>
 		</div>
-		<div class="goodsimg">
-			<img src="./home/img/goodslist.jpg" />
+		<div ng-repeat="item in listData.slice(11, 12)">
+			<div class="goodslistheader" ng-repeat="item1 in item.items">
+				<img src="{{ item1.imgUrl }}" />
+			</div>
 		</div>
-		<div class="goodsimg">
-			<img src="./home/img/goodslist.jpg" />
+		<div ng-repeat="item in listData.slice(12, 16)">
+			<div class="goodsimg" ng-repeat="item1 in item.items">
+				<img src="{{ item1.imgUrl }}" />
+			</div>
 		</div>
-		<div class="goodsimg">
-			<img src="./home/img/goodslist.jpg" />
+		<div ng-repeat="item in listData.slice(16, 17)">
+			<div class="goodslistheader" ng-repeat="item1 in item.items">
+				<img src="{{ item1.imgUrl }}" />
+			</div>
 		</div>
-		<div class="goodslistheader">
-			<img src="./home/img/goodslistheader.jpg" />
+		<div ng-repeat="item in listData.slice(17, 18)">
+			<div class="goodsimg" ng-repeat="item1 in item.items">
+				<img src="{{ item1.imgUrl }}" />
+			</div>
 		</div>
-		<div class="goodsimg">
-			<img src="./home/img/bz-banner.jpg" />
+		<div class="goodslist" ng-repeat="item in listData.slice(18, 19)">
+			<ul>
+				<li ng-repeat="item1 in item.items">
+					<a ui-sref="home"><img src="{{ item1.imgUrl }}" /></a>
+					<p class="goodslist_name">{{ item1.goodsName }}</p>
+					<div class="goodslist_price">
+						<p class="goodslist_markerprice">￥{{ item1.marketPrice }}</p>
+						<p class="goodslist_nowprice">￥{{ item1.price }}</p>
+						<p class="goodslist_addcart"><img src="./home/img/addcart.png" /></p>
+					</div>
+				</li>
+			</ul>
 		</div>
-		<div class="goodsimg">
-			<img src="./home/img/bz-banner.jpg" />
+		<div class="clear"></div>
+		<div ng-repeat="item in listData.slice(19, 20)">
+			<div class="goodsimg" ng-repeat="item1 in item.items">
+				<img src="{{ item1.imgUrl }}" />
+			</div>
 		</div>
-		<div class="goodsimg">
-			<img src="./home/img/bz-banner.jpg" />
+		<div class="goodslist" ng-repeat="item in listData.slice(20, 21)">
+			<ul>
+				<li ng-repeat="item1 in item.items">
+					<a ui-sref="home"><img src="{{ item1.imgUrl }}" /></a>
+					<p class="goodslist_name">{{ item1.goodsName }}</p>
+					<div class="goodslist_price">
+						<p class="goodslist_markerprice">￥{{ item1.marketPrice }}</p>
+						<p class="goodslist_nowprice">￥{{ item1.price }}</p>
+						<p class="goodslist_addcart"><img src="./home/img/addcart.png" /></p>
+					</div>
+				</li>
+			</ul>
 		</div>
-		<div class="goodsimg">
-			<img src="./home/img/bz-banner.jpg" />
+		<div class="clear"></div>
+		<div ng-repeat="item in listData.slice(21, 22)">
+			<div class="goodsimg" ng-repeat="item1 in item.items">
+				<img src="{{ item1.imgUrl }}" />
+			</div>
 		</div>
-		<div class="goodslistheader">
-			<img src="./home/img/goodslistheader.jpg" />
+		<div class="goodslist" ng-repeat="item in listData.slice(22, 23)">
+			<ul>
+				<li ng-repeat="item1 in item.items">
+					<a ui-sref="home"><img src="{{ item1.imgUrl }}" /></a>
+					<p class="goodslist_name">{{ item1.goodsName }}</p>
+					<div class="goodslist_price">
+						<p class="goodslist_markerprice">￥{{ item1.marketPrice }}</p>
+						<p class="goodslist_nowprice">￥{{ item1.price }}</p>
+						<p class="goodslist_addcart"><img src="./home/img/addcart.png" /></p>
+					</div>
+				</li>
+			</ul>
 		</div>
-		<div class="goodsimg">
-			<img src="./home/img/bz-banner.jpg" />
+		<div class="clear"></div>
+		<div ng-repeat="item in listData.slice(23, 24)">
+			<div class="goodslistheader" ng-repeat="item1 in item.items">
+				<img src="{{ item1.imgUrl }}" />
+			</div>
 		</div>
-		<div class="goodsimg">
-			<img src="./home/img/bz-banner.jpg" />
+		<div ng-repeat="item in listData.slice(24)">
+			<div class="goodsimg" ng-repeat="item1 in item.items">
+				<img src="{{ item1.imgUrl }}" />
+			</div>
 		</div>
-		<div class="goodsimg">
-			<img src="./home/img/tuangou.jpg" />
-		</div>
-		<div class="goodsimg">
-			<img src="./home/img/tuangou.jpg" />
-		</div>
+		<!--
 		<div class="goodslistheader">
 			<img src="./home/img/goodslistheader.jpg" />
 		</div>
@@ -96,146 +143,9 @@
 						<p class="goodslist_addcart"><img src="./home/img/addcart.png" /></p>
 					</div>
 				</li>
-				<li>
-					<a ui-sref="home"><img src="./home/img/tzsp.jpg" /></a>
-					<p class="goodslist_name">徐鸿飞无添加营养鸡蛋10枚425g</p>
-					<div class="goodslist_price">
-						<p class="goodslist_markerprice">￥3.99</p>
-						<p class="goodslist_nowprice">￥0.99</p>
-						<p class="goodslist_addcart"><img src="./home/img/addcart.png" /></p>
-					</div>
-				</li>
-				<li>
-					<a ui-sref="home"><img src="./home/img/tzsp.jpg" /></a>
-					<p class="goodslist_name">徐鸿飞无添加营养鸡蛋10枚425g</p>
-					<div class="goodslist_price">
-						<p class="goodslist_markerprice">￥3.99</p>
-						<p class="goodslist_nowprice">￥0.99</p>
-						<p class="goodslist_addcart"><img src="./home/img/addcart.png" /></p>
-					</div>
-				</li>
-				<li>
-					<a ui-sref="home"><img src="./home/img/tzsp.jpg" /></a>
-					<p class="goodslist_name">徐鸿飞无添加营养鸡蛋10枚425g</p>
-					<div class="goodslist_price">
-						<p class="goodslist_markerprice">￥3.99</p>
-						<p class="goodslist_nowprice">￥0.99</p>
-						<p class="goodslist_addcart"><img src="./home/img/addcart.png" /></p>
-					</div>
-				</li>
-				<li>
-					<a ui-sref="home"><img src="./home/img/tzsp.jpg" /></a>
-					<p class="goodslist_name">徐鸿飞无添加营养鸡蛋10枚425g</p>
-					<div class="goodslist_price">
-						<p class="goodslist_markerprice">￥3.99</p>
-						<p class="goodslist_nowprice">￥0.99</p>
-						<p class="goodslist_addcart"><img src="./home/img/addcart.png" /></p>
-					</div>
-				</li>
-				<li>
-					<a ui-sref="home"><img src="./home/img/tzsp.jpg" /></a>
-					<p class="goodslist_name">徐鸿飞无添加营养鸡蛋10枚425g</p>
-					<div class="goodslist_price">
-						<p class="goodslist_markerprice">￥3.99</p>
-						<p class="goodslist_nowprice">￥0.99</p>
-						<p class="goodslist_addcart"><img src="./home/img/addcart.png" /></p>
-					</div>
-				</li>
+				
 			</ul>
 		</div>
-		<div class="goodsimg">
-			<img src="./home/img/rdbq.jpg" />
-		</div>
-		<div class="goodslist">
-			<ul>
-				<li>
-					<a ui-sref="home"><img src="./home/img/tzsp.jpg" /></a>
-					<p class="goodslist_name">徐鸿飞无添加营养鸡蛋10枚425g</p>
-					<div class="goodslist_price">
-						<p class="goodslist_markerprice">￥3.99</p>
-						<p class="goodslist_nowprice">￥0.99</p>
-						<p class="goodslist_addcart"><img src="./home/img/addcart.png" /></p>
-					</div>
-				</li>
-				<li>
-					<a ui-sref="home"><img src="./home/img/tzsp.jpg" /></a>
-					<p class="goodslist_name">徐鸿飞无添加营养鸡蛋10枚425g</p>
-					<div class="goodslist_price">
-						<p class="goodslist_markerprice">￥3.99</p>
-						<p class="goodslist_nowprice">￥0.99</p>
-						<p class="goodslist_addcart"><img src="./home/img/addcart.png" /></p>
-					</div>
-				</li>
-				<li>
-					<a ui-sref="home"><img src="./home/img/tzsp.jpg" /></a>
-					<p class="goodslist_name">徐鸿飞无添加营养鸡蛋10枚425g</p>
-					<div class="goodslist_price">
-						<p class="goodslist_markerprice">￥3.99</p>
-						<p class="goodslist_nowprice">￥0.99</p>
-						<p class="goodslist_addcart"><img src="./home/img/addcart.png" /></p>
-					</div>
-				</li>
-				<li>
-					<a ui-sref="home"><img src="./home/img/tzsp.jpg" /></a>
-					<p class="goodslist_name">徐鸿飞无添加营养鸡蛋10枚425g</p>
-					<div class="goodslist_price">
-						<p class="goodslist_markerprice">￥3.99</p>
-						<p class="goodslist_nowprice">￥0.99</p>
-						<p class="goodslist_addcart"><img src="./home/img/addcart.png" /></p>
-					</div>
-				</li>
-				<li>
-					<a ui-sref="home"><img src="./home/img/tzsp.jpg" /></a>
-					<p class="goodslist_name">徐鸿飞无添加营养鸡蛋10枚425g</p>
-					<div class="goodslist_price">
-						<p class="goodslist_markerprice">￥3.99</p>
-						<p class="goodslist_nowprice">￥0.99</p>
-						<p class="goodslist_addcart"><img src="./home/img/addcart.png" /></p>
-					</div>
-				</li>
-				<li>
-					<a ui-sref="home"><img src="./home/img/tzsp.jpg" /></a>
-					<p class="goodslist_name">徐鸿飞无添加营养鸡蛋10枚425g</p>
-					<div class="goodslist_price">
-						<p class="goodslist_markerprice">￥3.99</p>
-						<p class="goodslist_nowprice">￥0.99</p>
-						<p class="goodslist_addcart"><img src="./home/img/addcart.png" /></p>
-					</div>
-				</li>
-			</ul>
-		</div>
-		<div class="goodslistheader">
-			<img src="./home/img/goodslistheader.jpg" />
-		</div>
-		<div class="goodsimg">
-			<img src="./home/img/footbanner.jpg" />
-		</div>
-		<div class="goodsimg">
-			<img src="./home/img/footbanner.jpg" />
-		</div>
-		<div class="goodsimg">
-			<img src="./home/img/footbanner.jpg" />
-		</div>
-		<div class="goodsimg">
-			<img src="./home/img/footbanner.jpg" />
-		</div>
-		<div class="goodsimg">
-			<img src="./home/img/footbanner.jpg" />
-		</div>
-		<div class="goodsimg">
-			<img src="./home/img/footbanner1.jpg" />
-		</div>
-		<div class="goodsimg">
-			<img src="./home/img/footbanner1.jpg" />
-		</div>
-		<div class="goodsimg">
-			<img src="./home/img/footbanner1.jpg" />
-		</div>
-		<div class="goodsimg">
-			<img src="./home/img/footbanner1.jpg" />
-		</div>
-		<div class="goodsimg">
-			<img src="./home/img/footbanner1.jpg" />
-		</div>
+		-->
 	</div>
 </div>
